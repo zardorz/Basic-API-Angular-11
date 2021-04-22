@@ -1,0 +1,44 @@
+<ngx-loading
+  [show]="loading"
+  [config]="{ backdropBorderRadius: '3px' }"
+></ngx-loading>
+<div class="col-md-12 user-container">
+  <h2 style="margin: auto; padding-bottom: 20px">
+    Lista de Moedas
+
+    <button
+      class="btn btn-success"
+      style="float: right"
+      (click)="getAllCoins()"
+    >
+      Buscar
+    </button>
+  </h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" style="vertical-align: middle">Id</th>
+        <th
+          class="d-none d-lg-table-cell"
+          scope="col"
+          style="vertical-align: middle"
+        >
+          Nome
+        </th>
+        <th scope="col" style="vertical-align: middle">Simbolo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coin of coins">
+        <td scope="row" style="vertical-align: middle">{{ coin.id }}</td>
+        <td
+          class="d-none d-lg-table-cell"
+          style="vertical-align: middle !important"
+        >
+          {{ coin.name }}
+        </td>
+        <td style="vertical-align: middle">{{ coin.symbol }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

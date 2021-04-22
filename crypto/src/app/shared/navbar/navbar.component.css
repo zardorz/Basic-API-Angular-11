@@ -1,0 +1,31 @@
+*{
+    color: white;
+}
+
+.navbar {
+    background-color: black !important;
+    z-index: 101 !important;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar .nav-item {
+    text-align: right;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+  color: chocolate;
+}
+
+
+.router-link-active {
+	color: yellow;
+	font-weight: bold;
+}
